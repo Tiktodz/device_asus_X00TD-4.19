@@ -26,6 +26,10 @@ TARGET_EXCLUDES_AUDIOFX := true
 TARGET_INCLUDE_ACCORD := false
 WITH_GMS := false
 
+# R8 Java optimizations for SystemUI and system_server,
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+
 # Device identifier
 # This must come after all inclusions.
 PRODUCT_NAME := lineage_X00TD
