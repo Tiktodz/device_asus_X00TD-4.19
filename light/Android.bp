@@ -5,11 +5,11 @@
 //
 
 cc_binary {
-    name: "android.hardware.light-service.asus_sdm660",
+    name: "android.hardware.light-service.X00TD",
     vendor: true,
     relative_install_path: "hw",
-    init_rc: ["android.hardware.light-service.asus_sdm660.rc"],
-    vintf_fragments: ["android.hardware.light-service.asus_sdm660.xml"],
+    init_rc: ["android.hardware.light-service.X00TD.rc"],
+    vintf_fragments: ["android.hardware.light-service.X00TD.xml"],
     srcs: [
         "main.cpp",
         "Lights.cpp",

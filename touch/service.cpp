@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "vendor.lineage.touch@1.0-service.asus_sdm660"
+#define LOG_TAG "vendor.lineage.touch@1.0-service.X00TD"
 
 #include <android-base/logging.h>
 #include <android/binder_manager.h>

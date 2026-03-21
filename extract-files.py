@@ -19,9 +19,10 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/asus/sdm660-common',
-    'device/asus/sdm660-common/qcom-caf',
+    'device/asus/X00TD',
+    'device/asus/X00TD/qcom-caf',
     'hardware/qcom-caf/wlan',
+    'vendor/asus/X00TD',
     'vendor/qcom/opensource/dataservices',
 ]
 
@@ -113,11 +114,27 @@ blob_fixups: blob_fixups_user_type = {
     # DRM Widevine - uneeded
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
+    # Camera - uneeded
+    'vendor/lib/libmmcamera_tuning.so': blob_fixup()
+        .remove_needed('libmm-qcamera.so'),       
+    # Fingerprint - uneeded
+    'vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so': blob_fixup()
+        .replace_needed('libprotobuf-cpp-lite.so', 'libprotobuf-cpp-lite-21.12.so'),
+    'vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so': blob_fixup()
+        .replace_needed('libhidlbase.so.so', 'libhidlbase-v32.so'),
+    'vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so': blob_fixup()
+        .replace_needed('libhidlbase.so.so', 'libhidlbase-v32.so'),
+    # Fingerprint - liblog dep.
+    'vendor/lib64/hw/cdfinger.fingerprint.default.so': blob_fixup()
+        .add_needed('liblog.so'),
+    # Fingerprint - so name fixups
+    ('vendor/lib64/hw/cdfinger.fingerprint.default.so', 'vendor/lib64/hw/fingerprint.sdm660.so'):blob_fixup()
+        .fix_soname(),
 }  # fmt: skip
 
 # Define the module
 module = ExtractUtilsModule(
-    'sdm660-common',
+    'X00TD',
     'asus',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
