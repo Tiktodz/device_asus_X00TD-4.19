@@ -63,3 +63,20 @@ on boot
     chown system system /sys/class/sensors/stk3x1x-light/sensors_name
 
     chown radio radio sys/module/stk3x1x/parameters/call_status_flag
+
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.min
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.max
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
+
+    chown system system /dev/cpuctl/foreground/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/foreground/cpu.uclamp.min
+    chown system system /dev/cpuctl/foreground/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/foreground/cpu.uclamp.max
+
+    chown system system /dev/cpuctl/background/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/background/cpu.uclamp.min
+    chown system system /dev/cpuctl/background/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/background/cpu.uclamp.max
