@@ -144,12 +144,12 @@
       "ResetOnInit": true
     },
     {
-      "Name": "TASchedtuneBoost",
-      "Path": "/dev/stune/top-app/schedtune.boost",
+      "Name": "UclampMinTopApp",
+      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
+        "50",
+        "20",
         "10",
-        "5",
-        "1",
         "0"
       ],
       "ResetOnInit": true
@@ -283,7 +283,7 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "TASchedtuneBoost",
+      "Node": "UclampMinTopApp",
       "Duration": 150,
       "Value": "10"
     },
@@ -325,9 +325,9 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "TASchedtuneBoost",
+      "Node": "UclampMinTopApp",
       "Duration": 3000,
-      "Value": "10"
+      "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
