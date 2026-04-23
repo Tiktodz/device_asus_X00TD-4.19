@@ -8,8 +8,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common crDroid stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+
+TARGET_DISABLE_EPPE := true
+
+# Inherit some common LineageOS stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDE_AXFX := false
+AXION_CAMERA_REAR_INFO := 13,5
+AXION_CAMERA_FRONT_INFO := 8
+AXION_MAINTAINER := EunjiX
+AXION_PROCESSOR := Snapdragon_636
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
