@@ -9,9 +9,9 @@ rm -rf vendor/asus
 rm -rf lineage/scripts
 
 ## Cloning
-git clone --depth=1 https://github.com/Tiktodz/device_asus_sdm660-common-4.19 -b voltage device/asus/sdm660-common
+git clone --depth=1 https://github.com/Tiktodz/device_asus_sdm660-common-4.19 -b vos device/asus/sdm660-common
 git clone --depth=1 https://github.com/sotodrom/kernel_asus_sdm660-4.19 -b 16 --single-branch kernel/asus/sdm660
-git clone --depth=1 https://github.com/SonicBSV/proprietary_vendor_asus-4.19 vendor/asus
+git clone --depth=1 https://github.com/Tiktodz/vendor_asus-4.19 -b vos vendor/asus
 git clone --depth=1 https://github.com/LineageOS/scripts lineage/scripts
 
 ## Integrate KernelSU
