@@ -8,9 +8,9 @@ rm -rf kernel/asus
 rm -rf vendor/asus
 
 ## Cloning
-git clone --depth=1 https://github.com/Tiktodz/device_asus_sdm660-common-4.19 -b newpart device/asus/sdm660-common
+git clone --depth=1 https://github.com/sotodrom/device_asus_sdm660-common-4.19 -b newpart device/asus/sdm660-common
 git clone --depth=1 https://github.com/sotodrom/kernel_asus_sdm660-4.19 -b newpart --single-branch kernel/asus/sdm660
-git clone --depth=1 https://github.com/Tiktodz/vendor_asus-4.19 -b vos vendor/asus
+git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus-4.19 -b custom vendor/asus
 
 ## Integrate KernelSU
 cd kernel/asus/sdm660

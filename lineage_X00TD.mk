@@ -15,12 +15,13 @@ TARGET_DISABLE_EPPE := true
 # Inherit some common LineageOS stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-TARGET_ENABLE_BLUR := true
-TARGET_INCLUDE_AXFX := false
-AXION_CAMERA_REAR_INFO := 13,5
-AXION_CAMERA_FRONT_INFO := 8
+AXION_CAMERA_REAR_INFO := 16,5
+AXION_CAMERA_FRONT_INFO := 16
 AXION_MAINTAINER := EunjiX
 AXION_PROCESSOR := Snapdragon_636
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDE_AXFX := true
+WITH_GMS := true
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
