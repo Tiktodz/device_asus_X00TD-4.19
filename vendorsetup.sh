@@ -31,9 +31,8 @@ cd -
 
 #### signing
 rm -rf vendor/voltage-priv/keys
-mkdir -p vendor/voltage-priv/keys
-sed -i 's|PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/testkey|PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/voltage-priv/keys/releasekey|g' lineage/scripts/lineage-priv-template/keys.mk
-cp -R lineage/scripts/lineage-priv-template/* vendor/voltage-priv/keys/
+git clone https://github.com/VoltageOS/vendor_voltage-priv_keys vendor/voltage-priv/keys
+sed -i 's|PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/voltage-priv/keys/testkey|PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/voltage-priv/keys/releasekey|g' vendor/voltage-priv/keys/keys.mk
 cd vendor/voltage-priv/keys
 bash keys.sh
 cd -
