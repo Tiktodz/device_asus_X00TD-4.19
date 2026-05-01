@@ -21,7 +21,7 @@ AXION_MAINTAINER := EunjiX
 AXION_PROCESSOR := Snapdragon_636
 TARGET_ENABLE_BLUR := true
 TARGET_INCLUDE_AXFX := true
-WITH_GMS := false
+WITH_GMS := true
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
